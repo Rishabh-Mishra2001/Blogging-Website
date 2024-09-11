@@ -1,0 +1,35 @@
+<%- include("partials/header.ejs") %>
+
+<body>
+  <div class="container form">
+    <form action="/submit" method="POST" class="main-form">
+      <div class="title mt-5 mb-3">
+        <label for="title" class="form-label fs-4">Title :</label>
+        <input
+          type="text"
+          class="form-control border border-secondary"
+          aria-label="Sizing example input"
+          name="title"
+          autofocus="none"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="The Blog" class="form-label fs-4">Blog :</label>
+        <textarea
+          class="form-control border border-secondary"
+          name="blog"
+          id="exampleFormControlTextarea1"
+          rows="10"
+        ></textarea>
+      </div>
+      <button
+        type="submit"
+        class="blog-submit-btn btn btn-secondary opacity-75"
+      >
+        POST
+      </button>
+    </form>
+  </div>
+</body>
+
+<%- include("partials/footer.ejs") %>

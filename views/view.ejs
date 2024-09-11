@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs") %> 
+
+
+<% if (locals.myBlogs && myBlogs.length !=0) { %>
+  <% for( let i = 0; i < myBlogs.length; i++ ) { %>
+    <form action="/update" method="POST">
+    <article class="container">
+    <h2 class="mt-3 fs-2" name="title">
+      <strong><%= myBlogs[i].title %></strong>
+    </h2>
+    <input type="hidden" name="title" value="<%= myBlogs[i].title%>">
+    <p class="ps-2 fs-5" name="content" id="blog-content"><%= myBlogs[i].content %></p>
+    <input type="hidden" name="content" value="<%= myBlogs[i].content%>">
+    <input type="hidden" name="id" value="<%=i%>" />
+    <button type="submit" class="btn btn-secondary opacity-75">Edit</button>
+  </article>
+</form>
+
+<br>
+
+<% } %> 
+
+<% } else { %>
+<h1 class="text-center mt-4">Oh No!! You have no blogs here!!</h1>
+<%}%>
+
+
+<%- include("partials/footer.ejs") %>

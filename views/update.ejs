@@ -1,0 +1,35 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container form">
+  <form action="/view" method="POST" class="main-form">
+    <div class="title my-3">
+      <label for="title" class="form-label fs-4">Title :</label>
+      <input
+        type="text"
+        class="form-control border border-secondary"
+        aria-label="Sizing example input"
+        name="title"
+        aria-describedby="inputGroup-sizing-default"
+        value="<%= obj.newTitle %>"
+      />
+    </div>
+    <div class="mb-4">
+      <label for="The Blog" class="form-label fs-4">Blog :</label>
+      <textarea
+        class="form-control border border-secondary"
+        name="blog"
+        id="exampleFormControlTextarea1"
+        rows="10"><%= obj.newContent %></textarea>
+    </div>
+    <input type="hidden" name="index" id="index_update" value="<%= obj.id%>" />
+    <button type="submit" class="btn btn-secondary opacity-75">
+      UPDATE
+    </button>
+  </form>
+  <form action="/delete" method="POST" class="my-3 main-form">
+    <input type="hidden" name="index" value="<%= obj.id %>" >
+    <button type="submit" class="btn btn-danger opacity-85">DELETE</button>
+  </form>
+</div>
+
+<%- include("partials/footer.ejs") %>

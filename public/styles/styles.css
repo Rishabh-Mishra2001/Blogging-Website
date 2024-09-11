@@ -1,0 +1,40 @@
+body {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; 
+  background-color: #8a8c8f; */
+  font-family: "Open Sans", sans-serif;
+}
+
+.main-form {
+  max-width: 50%;
+  margin: auto;
+  position: relative;
+}
+
+.title {
+  margin-top: 2rem;
+}
+
+.blog-submit-btn {
+  position: absolute;
+  left: 44%;
+}
+
+/* article {
+  max-width: 60%;
+} */
+
+#blog-content {
+  text-align: justify;
+}
+
+footer {
+  position: relative;
+}
+
+footer p {
+  position: absolute;
+  /* top: 1%; */
+  left: 43%;
+}
